@@ -1,5 +1,6 @@
 package com.projetotopicos.annamendes.entity;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -22,7 +23,7 @@ public class Anotacao {
     @Column(name = "ant_texto")
     private String texto;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "usr_id")
     private Usuario usuario;
 
@@ -51,4 +52,3 @@ public class Anotacao {
     }
     
 }
-
